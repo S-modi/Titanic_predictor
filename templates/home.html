@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Titanic Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <script src="/your-path-to-fontawesome/js/brands.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Titanic Predictor</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="Pclass" placeholder="enter pass class"><br>
+                <input class="form-input" type="text" name="Sex" placeholder="M1 F0"><br>
+                <input class="form-input" type="text" name="Age" placeholder="Pass Age"><br>
+                <input class="form-input" type="text" name="SibSp" placeholder="SibSp"><br>
+                <input class="form-input" type="text" name="Parch" placeholder="Parch"><br>
+                <input class="form-input" type="text" name="Fare" placeholder="Fare price"><br>
+                <input class="form-input" type="text" name="Cabin" placeholder="Cabin"><br>
+                <input class="form-input" type="text" name="Embarked" placeholder="Embarked"><br>
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href=""><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/sarthak-modi-35831918b/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made BY Sarthak modi.</p>
+       </div>
+
+    </body>
+</html>
